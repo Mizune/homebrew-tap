@@ -5,21 +5,21 @@
 class Mosaic < Formula
   desc "TUI command center for running 10+ AI coding agents in parallel"
   homepage "https://github.com/Mizune/mosaic"
-  version "0.10.0"
+  version "0.11.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Mizune/mosaic/releases/download/v0.10.0/mosaic_0.10.0_darwin_amd64.tar.gz"
-      sha256 "5ee500936cd0edd583c6c3091c1e94add447917c7d420fec76e57be2caf81f9d"
+      url "https://github.com/Mizune/mosaic/releases/download/v0.11.0/mosaic_0.11.0_darwin_amd64.tar.gz"
+      sha256 "3a3a152b161651da9dfd1c7aad7709861da42893ced6de36c2d6f79f8cc49feb"
 
       define_method(:install) do
         bin.install "mosaic"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Mizune/mosaic/releases/download/v0.10.0/mosaic_0.10.0_darwin_arm64.tar.gz"
-      sha256 "cc3dd56087d4d07479c878d1af9bd6fa5a39aa92490ab8ee1f48a83110e97040"
+      url "https://github.com/Mizune/mosaic/releases/download/v0.11.0/mosaic_0.11.0_darwin_arm64.tar.gz"
+      sha256 "1c872d9880dd4ad23b70b97aab509605056dcd4667c96aa01c44f93cbd2cac31"
 
       define_method(:install) do
         bin.install "mosaic"
@@ -29,15 +29,15 @@ class Mosaic < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Mizune/mosaic/releases/download/v0.10.0/mosaic_0.10.0_linux_amd64.tar.gz"
-      sha256 "ac8d4dcaeab7be421a8c87582f8f793b79277a5d37173d83d23d1c83a5d37ac8"
+      url "https://github.com/Mizune/mosaic/releases/download/v0.11.0/mosaic_0.11.0_linux_amd64.tar.gz"
+      sha256 "44b1dacd59b1e27b3c6bf91196028a499b2cee22432f495faf93835be80a5c7c"
       define_method(:install) do
         bin.install "mosaic"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Mizune/mosaic/releases/download/v0.10.0/mosaic_0.10.0_linux_arm64.tar.gz"
-      sha256 "e4919ce05834de61586dc53217dbdce83cabe5c97107f19a5e76dff90052a4d4"
+      url "https://github.com/Mizune/mosaic/releases/download/v0.11.0/mosaic_0.11.0_linux_arm64.tar.gz"
+      sha256 "4ae72cc601de03b8ff2d527559e41379c42043c7ce3fed3948fe1ef4b25ce629"
       define_method(:install) do
         bin.install "mosaic"
       end
